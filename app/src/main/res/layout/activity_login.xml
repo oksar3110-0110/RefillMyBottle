@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context="com.refillmybottle.refilmybottle.Login">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo"
+            android:layout_marginBottom="60dp"
+            android:layout_gravity="center" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Welcome"
+            android:textStyle="bold"
+            android:textSize="24dp"
+            android:fontFamily="sans-serif" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sign in to continue" />
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/username"
+            android:layout_marginTop="60dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:layout_marginBottom="20dp"
+            />
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:inputType="textPassword" />
+        <TextView
+            android:id="@+id/forgot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Forgot password ?"
+            android:textColor="@color/blue1"
+            android:gravity="end"
+            android:textStyle="bold"
+            android:layout_marginTop="6dp" />
+        <Button
+            android:id="@+id/sigIn"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="LOG IN"
+            android:layout_gravity="center"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:background="@drawable/button_blue"
+            android:elevation="10dp"
+            android:layout_marginTop="45dp">
+        </Button>
+        <TableLayout
+            android:layout_gravity="center"
+            android:layout_marginTop="35dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Don't have an account?" />
+                <TextView
+                    android:id="@+id/signUp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sign up, it's free!"
+                    android:layout_marginLeft="3dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/blue1"
+                    />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+
+</RelativeLayout>

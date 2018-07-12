@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">RefillmyBottle</string>
+    <string name="uela">By creating an account you agree to our \n Terms of Services and Privacy Policy</string>
+    <string name="title_activity_refill_station">RefillStation</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_new">New</string>
+    <string name="title_shop">Shop</string>
+    <string name="title_event">Event</string>
+    <string name="title_Profile">Profile</string>
+    <string name="title_maps">Maps</string>
+</resources>

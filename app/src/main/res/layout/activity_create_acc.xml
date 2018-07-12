@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context="com.refillmybottle.refilmybottle.CreateAcc">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/logo" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="Create An Account"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sign up to continue"
+                android:textSize="12dp" />
+
+            <Button
+                android:id="@+id/facebook"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_blue"
+                android:layout_marginTop="20dp"
+                android:text="Sign Up with Facebook"
+                android:layout_centerInParent="true"
+                android:gravity="left|center_vertical"
+                android:drawablePadding="8dp"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:paddingLeft="75dp"
+                android:textStyle="bold"
+                android:drawableLeft="@drawable/facebooklogo"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:layout_marginTop="25dp"
+                android:gravity="center"
+                android:text="or"
+                android:textSize="16dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="First Name"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp" />
+
+            <EditText
+                android:id="@+id/fName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_corner" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Last Name"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp" />
+            <EditText
+                android:id="@+id/Lname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_corner" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp" />
+            <EditText
+                android:id="@+id/Email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:background="@drawable/edit_text_corner" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Confirm Email"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                />
+            <EditText
+                android:id="@+id/EmailConfirm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:background="@drawable/edit_text_corner" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Password"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp" />
+            <EditText
+                android:id="@+id/pass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:background="@drawable/edit_text_corner" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Confirm Password"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp" />
+
+            <EditText
+                android:id="@+id/passConf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:background="@drawable/edit_text_corner" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:textColor="#000"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Date of Birth"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp" />
+            <EditText
+                android:id="@+id/doB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingRight="10dp"
+                android:background="@drawable/edit_text_corner" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Country/Region"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp" />
+            <EditText
+                android:id="@+id/country"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_corner"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="State"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                />
+
+            <EditText
+                android:id="@+id/City"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_corner"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Street"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp" />
+            <EditText
+                android:id="@+id/street"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_corner"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Photo Profile"
+                android:layout_marginTop="5dp"
+                />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/profileP"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/avatarprofile"
+                    />
+                <ImageButton
+                    android:id="@+id/TakeImage"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_toRightOf="@+id/profileP"
+                    android:layout_alignBottom="@id/profileP"
+                    android:src="@drawable/camera"
+                    />
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/UserAggreement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/uela"
+                android:layout_marginTop="15dp"
+                android:textAlignment="center"
+                android:textColor="@color/blue1" />
+            <Button
+                android:id="@+id/Continue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CONTINUE"
+                android:textColor="#fff"
+                android:elevation="10dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/gray_button"
+                android:layout_marginBottom="15dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
