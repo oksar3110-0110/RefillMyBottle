@@ -16,4 +16,9 @@
     <string name="sorry_no_fill">Sorry there are no refill stations nearby. \n But you can help us get there faster.</string>
     <string name="suggest_title">Suggest a new Refill Station</string>
     <string name="lipsum_suggest">Tell us where you think new water fouontain should be added. We can work tohether to ask for more water fountains and me it easier to refill our bottle. \nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</string>
+    <string name="slide_1_desc">Find refill stations near you</string>
+    <string name="slide_2_desc">Check-in every time you refill at our stations to measure your impact and collect point, give ratings and reviews to collect more points</string>
+    <string name="slide_3_desc">Suggest a refill stations and help us expand the refill network while you get more refill points </string>
+    <string name="slide_4_desc">Reedem your points in our shop</string>
+    <string name="slide_5_desc">Stay hydrated and check your daily water intake on your profile</string>
 </resources>
