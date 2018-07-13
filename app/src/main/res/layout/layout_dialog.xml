@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="300dp"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#fff">
+
+    <ImageView
+        android:id="@+id/likes"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/like" />
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/likes"
+        android:text="@string/thanks_dialog"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/Content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/title"
+        android:text="@string/lipsum_text"
+        android:gravity="center"
+        android:layout_marginTop="5dp" />
+    <TextView
+        android:id="@+id/okButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/Content"
+        android:layout_marginTop="50dp"
+        android:text="OK"
+        android:textStyle="bold"
+        android:textColor="@color/blue1"
+        android:gravity="center" />
+</LinearLayout>

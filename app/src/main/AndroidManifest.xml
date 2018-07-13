@@ -9,14 +9,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Login">
+        <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CreateAcc"></activity>
+        <activity android:name=".CreateAcc" />
+        <activity android:name=".Login" />
+        <activity android:name=".Intro.Intro" />
+        <activity android:name=".FragmentParent" />
+        <activity android:name=".MapsFragmentActivity" />
+        <activity android:name=".newrefill.fragment_new_intro" />
+        <activity android:name=".newrefill.FormRefill"></activity>
     </application>
 
 </manifest>

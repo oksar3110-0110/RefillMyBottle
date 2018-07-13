@@ -1,5 +1,6 @@
 package com.refillmybottle.refilmybottle;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AppCompatActivity;
@@ -39,6 +40,8 @@ public class Login extends AppCompatActivity {
             case R.id.sigIn:
                 break;
             case R.id.signUp:
+                startActivity(new Intent(Login.this, CreateAcc.class));
+                finish();
                 break;
         }
     }

@@ -10,4 +10,10 @@
     <string name="title_event">Event</string>
     <string name="title_Profile">Profile</string>
     <string name="title_maps">Maps</string>
+    <string name="thanks_dialog">Thank You for Join Us!</string>
+    <string name="lipsum_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</string>
+    <string name="expanding_text">Expanding Every day</string>
+    <string name="sorry_no_fill">Sorry there are no refill stations nearby. \n But you can help us get there faster.</string>
+    <string name="suggest_title">Suggest a new Refill Station</string>
+    <string name="lipsum_suggest">Tell us where you think new water fouontain should be added. We can work tohether to ask for more water fountains and me it easier to refill our bottle. \nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</string>
 </resources>
