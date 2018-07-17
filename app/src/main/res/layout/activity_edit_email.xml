@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="#fff"
+    tools:context="com.refillmybottle.refilmybottle.Profile.EditEmail">
+    <ImageView
+        android:id="@+id/back_arrows"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/backwhite"
+        android:tint="#000" />
+    <TextView
+        android:id="@+id/title_editmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:text="Email"
+        android:textStyle="bold"
+        android:layout_below="@+id/back_arrows"
+        android:textSize="36dp"
+        android:layout_marginTop="20dp" />
+    <TextView
+        android:id="@+id/label_current"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current email"
+        android:layout_below="@+id/title_editmail"
+        android:layout_marginTop="10dp" />
+    <EditText
+        android:id="@+id/et_currentmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_corner"
+        android:layout_below="@+id/label_current"
+        android:layout_marginTop="5dp"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp"
+        android:inputType="textEmailAddress"
+        />
+    <TextView
+        android:id="@+id/label_newemail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_currentmail"
+        android:text="New email"
+        android:layout_marginTop="5dp"
+        />
+    <EditText
+        android:id="@+id/et_newemail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_corner"
+        android:layout_below="@+id/label_newemail"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:inputType="textEmailAddress" />
+    <TextView
+        android:id="@+id/label_confirmemail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_newemail"
+        android:text="Confirm email"
+        android:inputType="textEmailAddress"
+        android:layout_marginTop="5dp" />
+    <EditText
+        android:id="@+id/et_confirmemail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/label_confirmemail"
+        android:background="@drawable/edit_text_corner"
+        android:layout_marginTop="5dp"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp" />
+    <TextView
+        android:id="@+id/label_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/et_confirmemail"
+        android:text="Passowrd" />
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:layout_below="@id/label_password"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/edit_text_corner"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp" />
+    <TextView
+        android:id="@+id/mailaddtore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_password"
+        android:text="Email address to receive account-related notification"
+        android:textStyle="italic"
+        android:layout_marginTop="5dp"
+        />
+    <Button
+        android:id="@+id/saves"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mailaddtore"
+        android:background="@drawable/button_blue"
+        android:text="SAVE"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:elevation="10dp"
+        android:layout_marginTop="10dp" />
+
+
+</RelativeLayout>

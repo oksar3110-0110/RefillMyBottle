@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="25dp"
+    android:background="@color/white"
+    tools:context="com.refillmybottle.refilmybottle.Profile.EditProfile">
+    <ImageView
+        android:id="@+id/back_arrows"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/backwhite"
+        android:tint="#000" />
+    <TextView
+        android:id="@+id/title_edit_profiles"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Edit Profile"
+        android:layout_below="@+id/back_arrows"
+        android:layout_marginTop="10dp"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:textColor="#000" />
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_fotos"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_below="@id/title_edit_profiles"
+        android:src="@drawable/profile"
+        android:layout_marginTop="5dp" />
+
+    <ImageView
+        android:id="@+id/edit_profiles_photo"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_alignEnd="@+id/profile_fotos"
+        android:layout_alignTop="@+id/profile_fotos"
+        android:scaleType="centerCrop"
+        android:src="@drawable/editprofileblue" />
+    <TextView
+        android:id="@+id/label_fullname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Full Name"
+        android:layout_below="@+id/profile_fotos"
+        android:layout_marginTop="20dp" />
+    <EditText
+        android:id="@+id/et_fullname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/label_fullname"
+        android:background="@drawable/edit_text_corner"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp" />
+    <TextView
+        android:id="@+id/label_dob"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/et_fullname"
+        android:text="Date of Birth" />
+    <EditText
+        android:id="@+id/et_dob"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/label_dob"
+        android:background="@drawable/edit_text_corner"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:drawableRight="@drawable/arrowbuttom"
+        android:layout_marginTop="5dp" />
+    <TextView
+        android:id="@+id/label_country_reg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_dob"
+        android:layout_marginTop="5dp"
+        android:text="Country/Region" />
+    <EditText
+        android:id="@+id/et_country_reg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_corner"
+        android:layout_below="@+id/label_country_reg"
+        android:drawableRight="@drawable/arrowbuttom"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp" />
+    <TextView
+        android:id="@+id/label_state"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="State"
+        android:layout_below="@+id/et_country_reg"
+        android:layout_marginTop="5dp" />
+    <EditText
+        android:id="@+id/et_state"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_corner"
+        android:layout_below="@+id/label_state"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:drawableRight="@drawable/arrowbuttom" />
+    <TextView
+        android:id="@+id/label_city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_state"
+        android:layout_marginTop="5dp"
+        android:text="City" />
+    <EditText
+        android:id="@+id/et_city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_corner"
+        android:drawableRight="@drawable/arrowbuttom"
+        android:layout_below="@+id/label_city"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp" />
+    <TextView
+        android:id="@+id/label_street"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Street"
+        android:layout_below="@+id/et_city"
+        android:layout_marginTop="5dp" />
+    <EditText
+        android:id="@+id/et_street"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_corner"
+        android:layout_below="@+id/label_street"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp" />
+    <Button
+        android:id="@+id/bt_save"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@drawable/button_blue"
+        android:layout_below="@+id/et_street"
+        android:layout_marginTop="20dp"
+        android:text="SAVE"
+        android:textColor="@color/white"
+        android:elevation="10dp"
+        />
+</RelativeLayout>

@@ -37,6 +37,7 @@
         android:layout_marginTop="20dp"
         android:textSize="20sp" />
     <TextView
+        android:id="@+id/content_reward"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="40dp"
@@ -44,6 +45,5 @@
         android:layout_below="@+id/title_suGest"
         android:text="@string/lipsum_suggest"
         android:layout_marginTop="5dp" />
-
 
 </RelativeLayout>

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#fff"
     tools:context="com.refillmybottle.refilmybottle.Maps.DetailMaps">
     <ImageView
         android:id="@+id/pic_wall_detail"
@@ -55,48 +56,150 @@
         android:layout_below="@+id/title_detail_maps"
         android:layout_marginLeft="20dp" />
     <LinearLayout
+        android:id="@+id/category_branch"
         android:layout_width="match_parent"
-        android:layout_height="64dp"
+        android:layout_height="36dp"
+        android:paddingLeft="20dp"
         android:orientation="horizontal"
-        android:layout_marginTop="10dp"
+        android:paddingRight="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/street_detail_maps">
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/button_slide"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
         android:gravity="center"
-        android:layout_below="@+id/street_detail_maps"
+        android:layout_below="@+id/category_branch"
         android:background="@drawable/edit_text_corner">
         <RelativeLayout
             android:id="@+id/overview_detail_maps"
             android:layout_width="64dp"
-            android:layout_height="48dp">
+            android:layout_height="36dp">
             <ImageView
                 android:id="@+id/img_overview"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
                 android:src="@drawable/overviewblue"
                 android:layout_centerHorizontal="true" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/overview_button"
+                android:textSize="12sp"
                 android:layout_below="@+id/img_overview"
                 android:layout_centerHorizontal="true" />
         </RelativeLayout>
         <RelativeLayout
             android:id="@+id/review_button"
             android:layout_width="64dp"
-            android:layout_height="48dp"
+            android:layout_height="36dp"
             android:layout_marginLeft="180dp">
             <ImageView
                 android:id="@+id/img_review"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
                 android:src="@drawable/thumb"
                 android:layout_centerHorizontal="true" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/review_button"
+                android:textSize="12sp"
                 android:layout_below="@+id/img_review"
                 android:layout_centerHorizontal="true" />
         </RelativeLayout>
     </LinearLayout>
+    <TextView
+        android:id="@+id/content_desc_detail_map"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/description_detail"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textSize="12sp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/button_slide" />
+    <TextView
+        android:id="@+id/refiling_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Refiling : "
+        android:textStyle="bold"
+        android:layout_below="@id/content_desc_detail_map"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"/>
+    <TextView
+        android:id="@+id/refiling_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10 Point"
+        android:textStyle="bold"
+        android:layout_below="@id/content_desc_detail_map"
+        android:layout_toRightOf="@+id/refiling_label"
+        android:layout_marginTop="5dp"/>
+        <TextView
+            android:id="@+id/openning_hours_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Opening hours : "
+            android:layout_below="@+id/refiling_label"
+            android:layout_marginLeft="20dp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/opening_status_now"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/refiling_status"
+            android:text="Open now"
+            android:textColor="@color/button_green"
+            android:layout_toRightOf="@+id/openning_hours_label" />
+        <TextView
+            android:id="@+id/work_hour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(6.30-22.00)"
+            android:layout_toRightOf="@+id/opening_status_now"
+            android:layout_below="@+id/refiling_label"
+            android:layout_marginLeft="2dp" />
+        <TextView
+            android:id="@+id/label_average_cost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Average cost : "
+            android:layout_below="@+id/work_hour"
+            android:layout_marginLeft="20dp" />
+        <TextView
+            android:id="@+id/average_cost_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rp. 160,000 for two people (approx.)"
+            android:layout_below="@id/work_hour"
+            android:layout_toRightOf="@+id/label_average_cost" />
+        <TextView
+            android:id="@+id/cash_credit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cash and Cards accepted"
+            android:textStyle="italic"
+            android:layout_below="@+id/average_cost_value"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/button_grey"
+            android:textSize="11sp"
+            android:layout_marginTop="5dp" />
+        <Button
+            android:id="@+id/refill_here"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Refill here"
+            android:layout_below="@+id/cash_credit"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/button_blue_cornerround"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/white"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" />
 
 </RelativeLayout>

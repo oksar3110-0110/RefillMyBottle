@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context="com.refillmybottle.refilmybottle.Profile.AccountSetting">
+    <ImageView
+        android:id="@+id/back_button_ep"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/backwhite"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:tint="#000" />
+    <TextView
+        android:id="@+id/title_setting_acc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/back_button_ep"
+        android:text="Account"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:textSize="36sp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp" />
+    <TextView
+        android:id="@+id/edit_profile"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_setting_acc"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/box_corner"
+        android:padding="15dp"
+        android:text="Edit profile"
+        android:textSize="18sp"
+        android:drawableRight="@drawable/arrowright" />
+    <TextView
+        android:id="@+id/change_email_addr"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_profile"
+        android:background="@drawable/box_corner"
+        android:padding="15dp"
+        android:text="Change email address"
+        android:drawableRight="@drawable/arrowright"
+        android:textSize="18sp" />
+    <TextView
+        android:id="@+id/change_pass"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/change_email_addr"
+        android:background="@drawable/box_corner"
+        android:drawableRight="@drawable/arrowright"
+        android:textSize="18sp"
+        android:text="Change password"
+        android:padding="15dp" />
+    <TextView
+        android:id="@+id/update_interest"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/change_pass"
+        android:padding="15dp"
+        android:background="@drawable/box_corner"
+        android:drawableRight="@drawable/arrowright"
+        android:text="Update interest"
+        android:textSize="18sp" />
+</RelativeLayout>

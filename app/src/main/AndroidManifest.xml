@@ -2,6 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.refillmybottle.refilmybottle">
 
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
     <application
         android:allowBackup="true"
         android:hardwareAccelerated="false"
@@ -29,7 +35,10 @@
         <activity android:name=".Intro.Slide5" />
         <activity android:name=".newrefill.FormRefill" />
         <activity android:name=".Event.CalendarEvent" />
-        <activity android:name=".Maps.DetailMaps"></activity>
+        <activity android:name=".Maps.DetailMaps" />
+        <activity android:name=".Profile.EditProfile" />
+        <activity android:name=".Profile.AccountSetting" />
+        <activity android:name=".Profile.EditEmail"></activity>
     </application>
 
 </manifest>
