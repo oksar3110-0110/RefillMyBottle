@@ -4,6 +4,7 @@
     android:layout_height="300dp"
     android:gravity="center"
     android:orientation="vertical"
+    android:elevation="10dp"
     android:layout_gravity="center"
     xmlns:tools="http://schemas.android.com/tools"
     android:background="#fff">
