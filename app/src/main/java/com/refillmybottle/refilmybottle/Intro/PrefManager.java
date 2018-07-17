@@ -1,4 +1,4 @@
-package com.refillmybottle.refillmybottle;
+package com.refillmybottle.refilmybottle.Intro;
 
 import android.content.Context;
 import android.content.SharedPreferences;

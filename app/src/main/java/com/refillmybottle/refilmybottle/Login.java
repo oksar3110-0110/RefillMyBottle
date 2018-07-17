@@ -1,5 +1,6 @@
 package com.refillmybottle.refilmybottle;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TextInputEditText;
@@ -7,6 +8,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.refillmybottle.refilmybottle.ServicesHandler.RequestInterfaces;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -24,12 +27,16 @@ public class Login extends AppCompatActivity {
     Button sigIn;
     @BindView(R.id.signUp)
     TextView signUp;
+    Context mContext;
+    RequestInterfaces mRequestInterfaces;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
+        mContext = this;
+
     }
 
     @OnClick({R.id.forgot, R.id.sigIn, R.id.signUp})
@@ -38,11 +45,18 @@ public class Login extends AppCompatActivity {
             case R.id.forgot:
                 break;
             case R.id.sigIn:
+                startActivity(new Intent(Login.this, FragmentParent.class));
+                finish();
                 break;
             case R.id.signUp:
                 startActivity(new Intent(Login.this, CreateAcc.class));
                 finish();
                 break;
         }
+    }
+
+    private void actionLogin() {
+
+
     }
 }

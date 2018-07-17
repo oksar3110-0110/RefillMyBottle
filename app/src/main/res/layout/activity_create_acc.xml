@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#fff"
+    android:padding="10dp"
     tools:context="com.refillmybottle.refilmybottle.CreateAcc">
     <ScrollView
         android:layout_width="match_parent"
@@ -67,14 +68,14 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="First Name"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp" />
+                android:text="First Name" />
 
             <EditText
                 android:id="@+id/fName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
                 android:background="@drawable/edit_text_corner" />
 
             <TextView
@@ -87,6 +88,8 @@
                 android:id="@+id/Lname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
                 android:background="@drawable/edit_text_corner" />
             <TextView
                 android:layout_width="match_parent"
@@ -99,6 +102,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
                 android:background="@drawable/edit_text_corner" />
             <TextView
                 android:layout_width="match_parent"
@@ -112,6 +117,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
                 android:background="@drawable/edit_text_corner" />
             <TextView
                 android:layout_width="match_parent"
@@ -124,6 +131,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
                 android:background="@drawable/edit_text_corner" />
             <TextView
                 android:layout_width="match_parent"
@@ -137,6 +146,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
                 android:background="@drawable/edit_text_corner" />
 
             <TextView
@@ -158,6 +169,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingRight="10dp"
+                android:paddingLeft="10dp"
                 android:background="@drawable/edit_text_corner" />
             <TextView
                 android:layout_width="match_parent"
@@ -169,6 +181,8 @@
                 android:id="@+id/country"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
                 android:background="@drawable/edit_text_corner"
                 />
 
@@ -184,6 +198,8 @@
                 android:id="@+id/City"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
                 android:background="@drawable/edit_text_corner"
                 />
             <TextView
@@ -196,6 +212,8 @@
                 android:id="@+id/street"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
                 android:background="@drawable/edit_text_corner"
                 />
             <TextView
@@ -243,5 +261,4 @@
 
         </LinearLayout>
     </ScrollView>
-
 </RelativeLayout>

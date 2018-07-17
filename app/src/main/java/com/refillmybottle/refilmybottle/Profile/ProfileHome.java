@@ -1,6 +1,5 @@
-package com.refillmybottle.refilmybottle.newrefill;
+package com.refillmybottle.refilmybottle.Profile;
 
-import android.provider.CalendarContract;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -12,10 +11,12 @@ import android.view.ViewGroup;
 
 import com.refillmybottle.refilmybottle.R;
 
-public class fragment_new_intro extends Fragment {
-    public static fragment_new_intro  newInstance(){
-        fragment_new_intro fragment_new_intro = new fragment_new_intro();
-        return fragment_new_intro;
+import java.util.zip.Inflater;
+
+public class ProfileHome extends Fragment {
+    public static ProfileHome  newInstance(){
+        ProfileHome profileHome = new ProfileHome();
+        return profileHome;
     }
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -25,8 +26,6 @@ public class fragment_new_intro extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.activity_fragment_new_intro, container, false);
+        return inflater.inflate(R.layout.activity_profile_home, container, false);
     }
-
-
 }

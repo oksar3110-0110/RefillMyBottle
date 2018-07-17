@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.refillmybottle.refilmybottle.Profile.ProfileHome">
+    <RelativeLayout
+        android:id="@+id/header_profile"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/bottlewater"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#977F7F7F">
+            <TextView
+                android:id="@+id/title_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/title_Profile"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/white"
+                android:layout_marginTop="20dp" />
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_foto"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginTop="48dp"
+                android:layout_below="@+id/title_profile"
+                android:layout_marginLeft="25dp"
+                android:src="@drawable/profile" />
+            <TextView
+                android:id="@+id/profile_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/name_profile"
+                android:layout_toRightOf="@+id/profile_foto"
+                android:layout_below="@+id/title_profile"
+                android:layout_marginTop="54dp"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginLeft="8dp" />
+            <TextView
+                android:id="@+id/city_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/city_profile"
+                android:textColor="@color/white"
+                android:layout_below="@+id/profile_name"
+                android:layout_toRightOf="@+id/profile_foto"
+                android:layout_marginLeft="8dp" />
+            <TextView
+                android:id="@+id/intro-bio_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/profile_foto"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="25dp"
+                android:textColor="@color/white"
+                android:text="@string/description_person" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/list_menu"
+        android:layout_width="match_parent"
+        android:layout_marginTop="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header_profile">
+        <TextView
+            android:id="@+id/account_settings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/settings"
+            android:drawablePadding="20dp"
+            android:text="@string/account_setting"
+            android:layout_marginTop="20dp"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/statistic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:drawableLeft="@drawable/graphic"
+            android:drawablePadding="20dp"
+            android:textSize="16sp"
+            android:layout_below="@+id/account_settings"
+            android:text="@string/statistic_profile" />
+        <TextView
+            android:id="@+id/points_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/points"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/account_settings"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:gravity="right"
+            android:layout_marginRight="36dp"
+            android:layout_toEndOf="@+id/statistic" />
+        <TextView
+            android:id="@+id/share_with_friend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/statistic"
+            android:layout_marginTop="20dp"
+            android:drawableLeft="@drawable/friends"
+            android:drawablePadding="20dp"
+            android:textSize="16sp"
+            android:text="@string/share_with_friends" />
+        <TextView
+            android:id="@+id/about_us"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="20dp"
+            android:drawableLeft="@drawable/worlds"
+            android:layout_below="@+id/share_with_friend"
+            android:layout_marginTop="20dp"
+            android:textSize="16sp"
+            android:text="@string/about_us" />
+        <TextView
+            android:id="@+id/terms_of_service"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/lock"
+            android:layout_below="@+id/about_us"
+            android:layout_marginTop="20dp"
+            android:drawablePadding="20dp"
+            android:text="@string/terms_of_service"
+            android:textSize="16sp"
+            android:layout_marginBottom="72dp" />
+    </RelativeLayout>
+</RelativeLayout>

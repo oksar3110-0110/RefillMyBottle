@@ -1,7 +1,9 @@
-package com.refillmybottle.refillmybottle;
+package com.refillmybottle.refilmybottle.Intro;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.refillmybottle.refilmybottle.R;
 
 public class Slide5 extends AppCompatActivity {
 

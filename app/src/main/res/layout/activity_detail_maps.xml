@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.refillmybottle.refilmybottle.Maps.DetailMaps">
+    <ImageView
+        android:id="@+id/pic_wall_detail"
+        android:layout_width="match_parent"
+        android:layout_height="256dp"
+        android:src="@drawable/starbuck" />
+    <ImageView
+        android:id="@+id/back_detail"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/backwhite"
+        android:layout_margin="20dp" />
+    <ImageView
+        android:id="@+id/share_button"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/share"
+        android:layout_alignParentRight="true"
+        android:layout_margin="20dp" />
+    <TextView
+        android:id="@+id/rating_text"
+        android:layout_width="36dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="229dp"
+        android:layout_marginRight="2dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/share_with_friend"
+        android:background="@drawable/background_rating"
+        android:text="4.5"
+        android:gravity="center"
+        android:padding="1dp"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/title_detail_maps"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/title_detail_maps"
+        android:layout_below="@+id/pic_wall_detail"
+        android:textStyle="bold"
+        android:textSize="24dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp" />
+    <TextView
+        android:id="@+id/street_detail_maps"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/street_detail_maps"
+        android:layout_below="@+id/title_detail_maps"
+        android:layout_marginLeft="20dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:layout_below="@+id/street_detail_maps"
+        android:background="@drawable/edit_text_corner">
+        <RelativeLayout
+            android:id="@+id/overview_detail_maps"
+            android:layout_width="64dp"
+            android:layout_height="48dp">
+            <ImageView
+                android:id="@+id/img_overview"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/overviewblue"
+                android:layout_centerHorizontal="true" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/overview_button"
+                android:layout_below="@+id/img_overview"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/review_button"
+            android:layout_width="64dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="180dp">
+            <ImageView
+                android:id="@+id/img_review"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/thumb"
+                android:layout_centerHorizontal="true" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/review_button"
+                android:layout_below="@+id/img_review"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

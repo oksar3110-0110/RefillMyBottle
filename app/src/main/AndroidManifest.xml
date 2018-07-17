@@ -4,8 +4,10 @@
 
     <application
         android:allowBackup="true"
+        android:hardwareAccelerated="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -20,9 +22,14 @@
         <activity android:name=".Login" />
         <activity android:name=".Intro.Intro" />
         <activity android:name=".FragmentParent" />
-        <activity android:name=".MapsFragmentActivity" />
-        <activity android:name=".newrefill.fragment_new_intro" />
-        <activity android:name=".newrefill.FormRefill"></activity>
+        <activity android:name=".Intro.Slide" />
+        <activity android:name=".Intro.Slide2" />
+        <activity android:name=".Intro.Slide3" />
+        <activity android:name=".Intro.Slide4" />
+        <activity android:name=".Intro.Slide5" />
+        <activity android:name=".newrefill.FormRefill" />
+        <activity android:name=".Event.CalendarEvent" />
+        <activity android:name=".Maps.DetailMaps"></activity>
     </application>
 
 </manifest>

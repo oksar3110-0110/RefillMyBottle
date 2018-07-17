@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_active="true">
+        <bitmap android:src="@drawable/shoppingcartblue"></bitmap>
+        <color android:color="@color/colorPrimary"></color>
+    </item>
+    <item android:state_active="false">
+        <bitmap android:src="@drawable/shoppingcart"></bitmap>
+        <color android:color="@color/button_grey"></color>
+    </item>
+</selector>

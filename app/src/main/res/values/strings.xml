@@ -21,4 +21,25 @@
     <string name="slide_3_desc">Suggest a refill stations and help us expand the refill network while you get more refill points </string>
     <string name="slide_4_desc">Reedem your points in our shop</string>
     <string name="slide_5_desc">Stay hydrated and check your daily water intake on your profile</string>
+    <string name="title_recycle">Suggest a new Refill Station</string>
+    <string name="content_text_recycle">Tell us where you think new water fountain should be added. We can work to ask for more water fountains and me t easier to refill our bottle</string>
+    <string name="image_modify_label">Can you please use a different image or modify the design?</string>
+    <string name="relation_suggest_station">What is your relation to the suggested station?</string>
+    <string name="type_refill">What type of refill station is it?</string>
+    <string name="account_setting">Account Settings</string>
+    <string name="statistic_profile">Statistic</string>
+    <string name="share_with_friends">Share with friends</string>
+    <string name="about_us">About us</string>
+    <string name="terms_of_service">Terms of Service and Privacy Policy</string>
+    <string name="points">1.200 pts</string>
+    <string name="name_profile">Bahrainsyah OKsareinaldi</string>
+    <string name="city_profile">Plered, Cirebon</string>
+    <string name="description_person">Hy! My name is Bahrainsyah Oksareinaldi \nIam very interested in Android Programming \nI am now work at Codelabs Indonesia.</string>
+    <string name="title_detail_maps">Starbucks Bintaro Jaya Plaza</string>
+    <string name="street_detail_maps">Jalan Bintaro Utama III, Tanggerang Selatan</string>
+    <string name="overview_button">Overview</string>
+    <string name="review_button">Review</string>
+    <string name="count_review">(10)</string>
+    <string name="description_detail">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</string>
+
 </resources>
