@@ -10,4 +10,7 @@
     <color name="white">#FFFFFF</color>
     <color name="border_edit_text">#E3ECF3</color>
     <color name="background_card">#F1F8FE</color>
+    <color name="start_gradient">#F8FAFF</color>
+    <color name="center_graient">#E7F3FF</color>
+    <color name="end_gradient">#D8EDFF</color>
 </resources>

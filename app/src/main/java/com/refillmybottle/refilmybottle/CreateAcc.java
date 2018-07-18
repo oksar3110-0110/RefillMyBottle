@@ -63,9 +63,8 @@ public class CreateAcc extends AppCompatActivity {
             case R.id.UserAggreement:
                 break;
             case R.id.Continue:
-                custom_dialog alert = new custom_dialog(this);
-                alert.show();
                 break;
         }
     }
+
 }
