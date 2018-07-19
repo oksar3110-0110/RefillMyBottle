@@ -43,5 +43,9 @@
     <string name="description_detail">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</string>
     <string name="got_point">You have got Free Credits!</string>
     <string name="title_rating_place">Please rating this place</string>
+    <string name="skip">Skip</string>
+    <string name="desc_intro_1">Find refill station near you</string>
+    <string name="desc_intro_2">Check-in every time you refill at our station to measure your impact and collect points, give ratings and review to collect more points.</string>
+    <string name="desc_intro_3">Suggest a refill station and help us expand the refill network while you get more refill points</string>
 
 </resources>

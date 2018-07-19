@@ -19,7 +19,7 @@
                 android:id="@+id/image_voucher"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
-                android:src="@drawable/RefillSationPerson" />
+                android:src="@drawable/refillstationperson" />
             <TextView
                 android:id="@+id/title_card_voucher"
                 android:layout_width="wrap_content"
