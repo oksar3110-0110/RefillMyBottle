@@ -27,6 +27,8 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+import static android.content.Intent.FLAG_ACTIVITY_CLEAR_TASK;
+
 public class Login extends AppCompatActivity {
 
     @BindView(R.id.username)
@@ -56,7 +58,6 @@ public class Login extends AppCompatActivity {
 
         if (sessionManager.getSessionStatus()){
             startActivity(new Intent(Login.this, FragmentParent.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK));
-            finish();
         }
 
     }
@@ -68,7 +69,6 @@ public class Login extends AppCompatActivity {
                 break;
             case R.id.sigIn:
                 login();
-                finish();
                 break;
             case R.id.signUp:
                 startActivity(new Intent(Login.this, CreateAcc.class));
@@ -86,14 +86,15 @@ public class Login extends AppCompatActivity {
                     try {
                         JSONObject jsonResult = new JSONObject(response.body().string());
                         if (jsonResult.getString("status").equals(200)){
+
                             String msg = jsonResult.getString("msg").toString();
                             Toast.makeText(mContext, msg, Toast.LENGTH_SHORT).show();
-                            sessionManager.saveSessionBoolean(sessionManager.SESSION_STATUS, true);
+                            //sessionManager.saveSessionBoolean(sessionManager.SESSION_STATUS, true);
                             String user_email = jsonResult.getJSONObject("user").getString("email");
                             String user_photo = jsonResult.getJSONObject("user").getString("photo");
                             String namadpn = jsonResult.getJSONObject("user").getString("namadpn");
                             String namablk = jsonResult.getJSONObject("user").getString("namablk");
-                            startActivity(new Intent(Login.this, FragmentParent.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK));
+                            startActivity(new Intent(mContext, FragmentParent.class));
                             finish();
                         } else {
                             String error_msg = jsonResult.getString("msg");

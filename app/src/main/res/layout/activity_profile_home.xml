@@ -65,7 +65,7 @@
                 android:src="@drawable/editprofile"
                 />
             <TextView
-                android:id="@+id/intro-bio_profile"
+                android:id="@+id/intro_bio_profile"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/profile_foto"

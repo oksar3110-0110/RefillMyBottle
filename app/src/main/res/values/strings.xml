@@ -47,5 +47,9 @@
     <string name="desc_intro_1">Find refill station near you</string>
     <string name="desc_intro_2">Check-in every time you refill at our station to measure your impact and collect points, give ratings and review to collect more points.</string>
     <string name="desc_intro_3">Suggest a refill station and help us expand the refill network while you get more refill points</string>
+    <string name="redeem_point">Redeem your point in our shop</string>
+    <string name="hidrate">Stay hidrate and check your daily water intake on your profile</string>
+    <string name="continue_intro">Continue</string>
+    <string name="title_activity_maps_serch">Map</string>
 
 </resources>

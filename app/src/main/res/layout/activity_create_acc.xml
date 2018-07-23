@@ -156,6 +156,7 @@
                 android:layout_marginBottom="20dp"
                 android:layout_marginTop="20dp"
                 android:gravity="center"
+                android:text="Personal Information"
                 android:textColor="#000"
                 android:textStyle="bold" />
             <TextView
@@ -170,6 +171,8 @@
                 android:layout_height="wrap_content"
                 android:paddingRight="10dp"
                 android:paddingLeft="10dp"
+                android:editable="false"
+                android:drawableRight="@drawable/arrowbuttom"
                 android:background="@drawable/edit_text_corner" />
             <TextView
                 android:layout_width="match_parent"
@@ -177,12 +180,13 @@
                 android:text="Country/Region"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp" />
-            <EditText
+            <Spinner
                 android:id="@+id/country"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingRight="10dp"
                 android:paddingLeft="10dp"
+                android:drawableRight="@drawable/arrowbuttom"
                 android:background="@drawable/edit_text_corner"
                 />
 
@@ -191,15 +195,30 @@
                 android:layout_height="wrap_content"
                 android:text="State"
                 android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
+                android:layout_marginBottom="5dp" />
+            <Spinner
+                android:id="@+id/et_state"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
+                android:drawableRight="@drawable/arrowbuttom"
+                android:background="@drawable/edit_text_corner"
                 />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="City"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp" />
 
-            <EditText
+            <Spinner
                 android:id="@+id/City"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingRight="10dp"
                 android:paddingLeft="10dp"
+                android:drawableRight="@drawable/arrowbuttom"
                 android:background="@drawable/edit_text_corner"
                 />
             <TextView

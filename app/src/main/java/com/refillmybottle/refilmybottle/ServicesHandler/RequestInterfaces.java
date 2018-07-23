@@ -20,7 +20,7 @@ public interface RequestInterfaces {
                         @Field("pass") String Password);
 
     @FormUrlEncoded
-    @POST("index.php?register")
+    @POST("index.php?do=register")
     Call<ResponseBody> registerrequest(
             @Field("namadpn") String namadpn,
             @Field("namablk") String namablk,

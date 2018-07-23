@@ -2,11 +2,23 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.refillmybottle.refilmybottle">
 
-    <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="ANDROID.PERMISSION.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -26,13 +38,10 @@
         </activity>
         <activity android:name=".CreateAcc" />
         <activity android:name=".Login" />
-        <activity android:name=".Intro.Intro" />
+        <activity
+            android:name=".Intro.Intro"
+            android:theme="@style/Theme.Intro" />
         <activity android:name=".FragmentParent" />
-        <activity android:name=".Intro.Slide" />
-        <activity android:name=".Intro.Slide2" />
-        <activity android:name=".Intro.Slide3" />
-        <activity android:name=".Intro.Slide4" />
-        <activity android:name=".Intro.Slide5" />
         <activity android:name=".newrefill.FormRefill" />
         <activity android:name=".Event.CalendarEvent" />
         <activity android:name=".Maps.DetailMaps" />
@@ -41,7 +50,20 @@
         <activity android:name=".Profile.EditEmail" />
         <activity android:name=".Maps.PremiumDetailMaps" />
         <activity android:name=".statistik.Voucher" />
-        <activity android:name=".statistik.AdapterVoucher"></activity>
+        <activity android:name=".statistik.AdapterVoucher" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity android:name=".Maps.MapsHome"></activity>
     </application>
 
 </manifest>
