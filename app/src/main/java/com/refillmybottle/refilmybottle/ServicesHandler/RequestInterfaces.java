@@ -1,11 +1,12 @@
 package com.refillmybottle.refilmybottle.ServicesHandler;
 
-import java.sql.Date;
+import com.refillmybottle.refilmybottle.response.response_state;
 
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
+import retrofit2.http.GET;
 import retrofit2.http.POST;
 
 /**
@@ -36,4 +37,11 @@ public interface RequestInterfaces {
             @Field("img") String img
     );
 
+    @FormUrlEncoded
+    @POST("index.php?do=geo")
+    Call<ResponseBody> getState(@Field("state") String states);
+
+    @FormUrlEncoded
+    @POST("index.php?do=geo")
+    Call<ResponseBody> cityReq (@Field("city") String city);
 }

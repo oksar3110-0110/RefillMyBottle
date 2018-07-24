@@ -43,5 +43,6 @@ dependencies {
     compile 'com.google.android.gms:play-services-maps:11.0.2'
     compile 'com.google.android.gms:play-services-location:11.0.2'
     compile 'com.google.android.gms:play-services-places:11.0.2'
+    compile 'com.mcxiaoke.volley:library:1.0.19'
 
 }

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v7.widget.CardView
+        android:layout_width="150dp"
+        android:layout_height="200dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp">
+        <android.support.design.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/image_thumb"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/bottleprogress" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@color/button_blue"
+                app:layout_anchor="@+id/image_thumb"
+                android:padding="12dp"
+                app:layout_anchorGravity="bottom|center">
+                <TextView
+                    android:id="@+id/places_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="Starbucks Bintaro"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/distance_places"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2mi,"
+                    android:textColor="@color/white"
+                    android:layout_below="@+id/places_title"
+                    android:textSize="9sp"
+                    />
+                <TextView
+                    android:id="@+id/stars_places"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4 stars"
+                    android:textSize="9sp"
+                    android:layout_below="@+id/places_title"
+                    android:layout_toRightOf="@+id/distance_places"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="5dp" />
+                <TextView
+                    android:id="@+id/price_item_places"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="9sp"
+                    android:layout_below="@+id/places_title"
+                    android:text="Free"
+                    android:layout_toRightOf="@+id/stars_places"
+                    android:layout_marginLeft="45dp" />
+            </RelativeLayout>
+        </android.support.design.widget.CoordinatorLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

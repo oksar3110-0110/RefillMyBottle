@@ -2,10 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.refillmybottle.refilmybottle">
 
-
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
     <uses-feature
         android:name="android.hardware.camera"
         android:required="false" />
@@ -17,7 +17,7 @@
         android:required="false" />
 
     <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="ANDROID.PERMISSION.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="ANDROID.PERMISSION.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
@@ -42,7 +42,6 @@
             android:name=".Intro.Intro"
             android:theme="@style/Theme.Intro" />
         <activity android:name=".FragmentParent" />
-        <activity android:name=".newrefill.FormRefill" />
         <activity android:name=".Event.CalendarEvent" />
         <activity android:name=".Maps.DetailMaps" />
         <activity android:name=".Profile.EditProfile" />
@@ -63,7 +62,8 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
-        <activity android:name=".Maps.MapsHome"></activity>
+        <activity android:name=".Maps.MapsHome" />
+        <activity android:name=".PermissionLocation"></activity>
     </application>
 
 </manifest>

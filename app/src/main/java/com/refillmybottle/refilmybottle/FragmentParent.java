@@ -34,7 +34,7 @@ public class FragmentParent extends AppCompatActivity {
         setContentView(R.layout.activity_fragment_parent);
         ButterKnife.bind(this);
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.frame_layout, fragment_new_intro.newInstance());
+        transaction.replace(R.id.frame_layout, MapsFragmentActivity.newInstace());
         transaction.commit();
 
     }
