@@ -68,7 +68,9 @@ public class Login extends AppCompatActivity {
             case R.id.forgot:
                 break;
             case R.id.sigIn:
-                login();
+               // login();
+                startActivity(new Intent(mContext, FragmentParent.class));
+                finish();
                 break;
             case R.id.signUp:
                 startActivity(new Intent(Login.this, CreateAcc.class));
@@ -89,11 +91,6 @@ public class Login extends AppCompatActivity {
 
                             String msg = jsonResult.getString("msg").toString();
                             Toast.makeText(mContext, msg, Toast.LENGTH_SHORT).show();
-                            //sessionManager.saveSessionBoolean(sessionManager.SESSION_STATUS, true);
-                            String user_email = jsonResult.getJSONObject("user").getString("email");
-                            String user_photo = jsonResult.getJSONObject("user").getString("photo");
-                            String namadpn = jsonResult.getJSONObject("user").getString("namadpn");
-                            String namablk = jsonResult.getJSONObject("user").getString("namablk");
                             startActivity(new Intent(mContext, FragmentParent.class));
                             finish();
                         } else {

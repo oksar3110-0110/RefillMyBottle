@@ -23,6 +23,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Base64;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
@@ -34,7 +36,10 @@ import android.widget.Toast;
 
 import com.refillmybottle.refilmybottle.ServicesHandler.RequestInterfaces;
 import com.refillmybottle.refilmybottle.ServicesHandler.Utils;
+import com.refillmybottle.refilmybottle.response.response_state;
 
+import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.ByteArrayOutputStream;
@@ -43,8 +48,10 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 import java.util.Locale;
 
 import butterknife.BindView;
@@ -54,6 +61,8 @@ import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 import static android.Manifest.permission.CAMERA;
 
@@ -96,7 +105,7 @@ public class CreateAcc extends AppCompatActivity {
     RequestInterfaces mRequestInterfaces;
     private Uri outputFileUri;
     private static int TAKE_PICTURE = 1;
-
+    ArrayList<String> states;
 
 
     @Override
@@ -107,8 +116,74 @@ public class CreateAcc extends AppCompatActivity {
         mContext = this;
         mRequestInterfaces = Utils.getApiServices();
 
+        final String[] Countries;
+
+
+
+
+        Countries = getResources().getStringArray(R.array.countries_array);
+
+
+
+        ArrayAdapter<String> adapter_country = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, Countries);
+        country.setAdapter(adapter_country);
+        country.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+        StatePost();
 
     }
+
+    //getState
+    private void StatePost() {
+    mRequestInterfaces.getState(country.getSelectedItem().toString()).enqueue(new Callback<ResponseBody>() {
+        @Override
+        public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+            try{
+                JSONObject jsonObject = new JSONObject(response.toString());
+                if (jsonObject.getString("status").equals(200)){
+                    JSONArray jsonArray = jsonObject.getJSONArray("data");
+                    for(int i=0; i>jsonArray.length();i++){
+                        JSONObject jsonObject1=jsonArray.getJSONObject(i);
+                        String state=jsonObject1.getString("state");
+                        states.add(state);
+                    }
+                }
+                et_state.setAdapter(new ArrayAdapter<String>(CreateAcc.this, android.R.layout.simple_spinner_dropdown_item, states));
+                et_state.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                        String States = et_state.getItemAtPosition(et_state.getSelectedItemPosition()).toString();
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> parent) {
+
+                    }
+                });
+            } catch (JSONException e){
+                e.printStackTrace();
+            }
+        }
+
+        @Override
+        public void onFailure(Call<ResponseBody> call, Throwable t) {
+
+        }
+    });
+
+
+    }
+
 
     @OnClick({R.id.facebook, R.id.TakeImage, R.id.UserAggreement, R.id.Continue, R.id.doB})
     public void onViewClicked(View view) {
@@ -189,7 +264,10 @@ public class CreateAcc extends AppCompatActivity {
 
     }
 
-    public void registerProses(){
+    //spinner country
+
+
+    /*public void registerProses(){
         mRequestInterfaces.registerrequest(fName.getText().toString(), Lname.getText().toString(),Email.getText().toString(), EmailConfirm.getText().toString(), pass.getText().toString(),
                 passConf.getText().toString(), doB.getText().toString(), country.getSelectedItem().toString(), et_state.getSelectedItem().toString(),
                 City.getSelectedItem().toString(), street.getText().toString()).enqueue(new Callback<ResponseBody>() {
@@ -209,7 +287,7 @@ public class CreateAcc extends AppCompatActivity {
 
             }
         });
-    }
+    }*/
 
 
 
