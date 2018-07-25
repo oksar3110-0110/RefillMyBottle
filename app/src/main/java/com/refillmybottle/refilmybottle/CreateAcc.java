@@ -36,7 +36,6 @@ import android.widget.Toast;
 
 import com.refillmybottle.refilmybottle.ServicesHandler.RequestInterfaces;
 import com.refillmybottle.refilmybottle.ServicesHandler.Utils;
-import com.refillmybottle.refilmybottle.model.States;
 import com.refillmybottle.refilmybottle.response.response_state;
 
 import org.json.JSONArray;
@@ -106,7 +105,7 @@ public class CreateAcc extends AppCompatActivity {
     RequestInterfaces mRequestInterfaces;
     private Uri outputFileUri;
     private static int TAKE_PICTURE = 1;
-    ArrayList<String> Statest;
+    ArrayList<String> states;
 
 
     @Override
@@ -116,18 +115,22 @@ public class CreateAcc extends AppCompatActivity {
         ButterKnife.bind(this);
         mContext = this;
         mRequestInterfaces = Utils.getApiServices();
+
         final String[] Countries;
-        Statest = new ArrayList<>();
+
+
 
 
         Countries = getResources().getStringArray(R.array.countries_array);
+
+
 
         ArrayAdapter<String> adapter_country = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, Countries);
         country.setAdapter(adapter_country);
         country.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                StatePost();
+
             }
 
             @Override
@@ -136,39 +139,37 @@ public class CreateAcc extends AppCompatActivity {
             }
         });
 
-        et_state.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                String StateS = et_state.getItemAtPosition(et_state.getSelectedItemPosition()).toString();
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
-
-
+        StatePost();
 
     }
 
     //getState
     private void StatePost() {
-        String Countries = country.getItemAtPosition(country.getSelectedItemPosition()).toString();
-        mRequestInterfaces.getState(Countries).enqueue(new Callback<ResponseBody>() {
+    mRequestInterfaces.getState(country.getSelectedItem().toString()).enqueue(new Callback<ResponseBody>() {
         @Override
         public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
             try{
-                JSONObject jsonObject = new JSONObject(response.body().toString());
-                if(jsonObject.getInt("status")==200){
+                JSONObject jsonObject = new JSONObject(response.toString());
+                if (jsonObject.getString("status").equals(200)){
                     JSONArray jsonArray = jsonObject.getJSONArray("data");
-                    for(int i=0;i<jsonArray.length();i++){
-                        JSONObject jsonObject1 = jsonArray.getJSONObject(i);
-                        String states = jsonObject1.getString("state");
-                        Statest.add(states);
+                    for(int i=0; i>jsonArray.length();i++){
+                        JSONObject jsonObject1=jsonArray.getJSONObject(i);
+                        String state=jsonObject1.getString("state");
+                        states.add(state);
                     }
                 }
-                et_state.setAdapter(new ArrayAdapter<String>(CreateAcc.this, android.R.layout.simple_spinner_dropdown_item, Statest));
+                et_state.setAdapter(new ArrayAdapter<String>(CreateAcc.this, android.R.layout.simple_spinner_dropdown_item, states));
+                et_state.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                        String States = et_state.getItemAtPosition(et_state.getSelectedItemPosition()).toString();
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> parent) {
+
+                    }
+                });
             } catch (JSONException e){
                 e.printStackTrace();
             }
@@ -179,6 +180,28 @@ public class CreateAcc extends AppCompatActivity {
 
         }
     });
+
+
+    }
+
+
+    @OnClick({R.id.facebook, R.id.TakeImage, R.id.UserAggreement, R.id.Continue, R.id.doB})
+    public void onViewClicked(View view) {
+        switch (view.getId()) {
+            case R.id.facebook:
+                break;
+            case R.id.TakeImage:
+                TakePhoto();
+                break;
+            case R.id.UserAggreement:
+                break;
+            case R.id.Continue:
+                //registerProcess();
+                break;
+            case R.id.doB :
+                datePicker();
+                break;
+        }
     }
 
     private void TakePhoto() {
