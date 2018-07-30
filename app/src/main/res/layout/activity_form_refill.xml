@@ -11,8 +11,8 @@
     tools:context="com.refillmybottle.refilmybottle.newrefill.FormRefill">
         <ImageView
             android:id="@+id/back_arrow"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
             android:src="@drawable/backwhite"
             android:tint="@color/button_grey"
             android:layout_margin="5dp" />

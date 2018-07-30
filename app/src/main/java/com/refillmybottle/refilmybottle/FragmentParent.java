@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.RelativeLayout;
 
+import com.refillmybottle.refilmybottle.Maps.MapsFragmentActivity;
 import com.refillmybottle.refilmybottle.Profile.ProfileHome;
 import com.refillmybottle.refilmybottle.newrefill.fragment_new_intro;
 
@@ -26,6 +27,9 @@ public class FragmentParent extends AppCompatActivity {
     RelativeLayout ShopBut;
     @BindView(R.id.profile_But)
     RelativeLayout profileBut;
+
+    public static final int BACK_PERIIOD = 2000;
+    private long LAST_PERIOD_BACK;
 
 
     @Override
@@ -64,6 +68,5 @@ public class FragmentParent extends AppCompatActivity {
 
 }
 
-
-
 }
+

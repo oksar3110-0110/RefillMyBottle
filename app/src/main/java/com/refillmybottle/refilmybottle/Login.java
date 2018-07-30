@@ -72,9 +72,9 @@ public class Login extends AppCompatActivity {
             case R.id.forgot:
                 break;
             case R.id.sigIn:
-               /*login();*/
-               startActivity(new Intent(Login.this, FragmentParent.class));
-               finish();
+                login();
+               /*startActivity(new Intent(Login.this, FragmentParent.class));
+               finish();*/
                 break;
             case R.id.signUp:
                 startActivity(new Intent(Login.this, CreateAcc.class));
@@ -90,7 +90,7 @@ public class Login extends AppCompatActivity {
                 if (response.isSuccessful()){
                     try {
                         JSONObject jsonResult = new JSONObject(response.body().string());
-                        if (jsonResult.getString("status").equals(200)){
+                        if (jsonResult.getString("status").equals("200")){
                             sessionManager.saveSessionBoolean(sessionManager.SESSION_STATUS, true);
                             String email = jsonResult.getJSONObject("user").getString("email");
                             sessionManager.saveSessionStr(sessionManager.SESSION_EMAIL, email);

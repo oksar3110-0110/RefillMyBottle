@@ -1,5 +1,9 @@
 package com.refillmybottle.refilmybottle.ServicesHandler;
 
+import com.refillmybottle.refilmybottle.response.RelationResponse;
+import com.refillmybottle.refilmybottle.response.ResponseCity;
+import com.refillmybottle.refilmybottle.response.ResponseCountry;
+import com.refillmybottle.refilmybottle.response.TypesResponse;
 import com.refillmybottle.refilmybottle.response.response_state;
 
 import okhttp3.ResponseBody;
@@ -15,13 +19,13 @@ import retrofit2.http.POST;
 
 public interface RequestInterfaces {
     @FormUrlEncoded
-    @POST("index.php?do=login")
+    @POST("water?do=login")
     Call<ResponseBody> loginRequest (
                         @Field("mail") String Username,
                         @Field("pass") String Password);
 
     @FormUrlEncoded
-    @POST("index.php?do=register")
+    @POST("water?do=register")
     Call<ResponseBody> registerrequest(
             @Field("namadpn") String namadpn,
             @Field("namablk") String namablk,
@@ -38,10 +42,21 @@ public interface RequestInterfaces {
     );
 
     @FormUrlEncoded
-    @POST("index.php?do=geo")
-    Call<ResponseBody> getState(@Field("state") String states);
+    @POST("water?do=geo")
+    Call<ResponseCountry> getCountry(@Field("abc") String abc);
+
+    @GET("water?do=relation")
+    Call<RelationResponse> getRelationData();
+
+    @GET("water?do=types")
+    Call<TypesResponse> getTypesData();
 
     @FormUrlEncoded
-    @POST("index.php?do=geo")
-    Call<ResponseBody> cityReq (@Field("city") String city);
+    @POST("water?do=geo")
+    Call<response_state> getState(@Field("state") String State);
+
+    @FormUrlEncoded
+    @POST("water?do=geo")
+    Call<ResponseCity> getCity(@Field("city") String city);
+
 }

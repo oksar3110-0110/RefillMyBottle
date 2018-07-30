@@ -19,6 +19,7 @@ public class SessionManager {
     public static final String SESSION_REGION = "sessionREGION";
     public static final String SESSION_CITY = "sessionCITY";
     public static final String SESSION_STREET = "sessionSTREET";
+    public static final String SESSION_UPLOAD_IMAGE_REG = "sessionIMAGE_REG";
     public static final String SESSION_STATUS = "sessionSTATUS";
 
     SharedPreferences session;
@@ -80,5 +81,9 @@ public class SessionManager {
 
     public boolean getSessionStatus(){
         return session.getBoolean(SESSION_STATUS, false);
+    }
+
+    public String getSessionUploadImageReg() {
+        return session.getString(SESSION_UPLOAD_IMAGE_REG, "");
     }
 }

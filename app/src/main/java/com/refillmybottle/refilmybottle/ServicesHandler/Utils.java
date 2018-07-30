@@ -9,7 +9,8 @@ import okhttp3.Request;
  */
 
 public class Utils {
-    public static final String BASE_URL = "http://botol.virkill.url.ph/";
+//    public static final String BASE_URL = "http://botol.dzen1010.ga/index.php/";
+    public static final String BASE_URL = "http://192.168.1.20/htdocs/magang/index.php/";
 
     public static RequestInterfaces getApiServices(){
         return RetrofitClient.getClient(BASE_URL).create(RequestInterfaces.class);
